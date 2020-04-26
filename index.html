@@ -1,69 +1,94 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/themes/base/jquery-ui.min.css">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
-    <title>Document</title>
-</head>
-<body>
-    <Header>
-        <h1>Weather Dashboard</h1>
-    </Header>
-    <div class="container">
-        <div class="row">
-            <div class="col-3">
-                <input class="form-control" type="text" placeholder="Input City Name"><input class="btn btn-primary" type="submit" value="Submit">
-                <div class="col-9">
+
+    <title>Weather Dashboard</title>
+  </head>
+  <body>
+
+        <Header>
+
+            <nav class="navbar navbar-light bg-light">
+                <a class="navbar-brand">Weather Dashboard</a>
+                <form class="form-inline">
+                  <input class="form-control mr-sm-2" type="search" placeholder="Input City Name" aria-label="Search" id="city-form">
+                  <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                </form>
+              </nav>
+
+        </Header>
+
+    </br>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-10">
                     <div class="card">
-                        <div class="card-body">Current Weather in Input City
+                        <div class="card-body" id="current">
+                          Current Weather
+                          <img id="weatherIcon" src="">
+                          <p>Temperature <span id="temp"></span></p>
+                          <p>Humidity <span id="humidity"></span></p>
+                          <p>Wind <span id="wind"></span></p>
+                          <p>UV Index <span id="uvIndex"></span></p>
+                        </div>
+                      </div>
+                </div>
+            </div>
+        </br>
+            <div class="row">
+                <div class="col-sm-2">
+                    <div class="card">
+                        <div class="card-body" id="tomorrow">
+                            Tomorrow's Weather
+                            <p>Temperature <span id="tempT"></span></p>
+                            <p>Humidity <span id="humidityT"></span></p>
+                        </div>
+                      </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="card">
+                        <div class="card-body" id="three">
+                            Day Three Weather
+                            <p>Temperature <span id="temp3"></span></p>
+                            <p>Humidity <span id="humidity3"></span></p>
+                        </div>
+                      </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="card">
+                        <div class="card-body" id="four">
+                            Day Four Weather
+                            <p>Temperature <span id="temp4"></span></p>
+                            <p>Humidity <span id="humidity4"></span></p>
+                        </div>
+                      </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="card">
+                        <div class="card-body" id="five">
+                            Day Five Weather
+                            <p>Temperature <span id="temp5"></span></p>
+                            <p>Humidity <span id="humidity5"></span></p>
                         </div>
                       </div>
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-2">Five Day Weather Forecast</div>
-            <div class="col-2">
-                <div class="day1">
-                    <div class="oneWeather">
-                      This is some text within a card body.
-                    </div>
-                  </div>
-            <div class="col-2">
-                  <div class="day2">
-                    <div class="twoWeather">
-                      This is some text within a card body.
-                    </div>
-                  </div>
-            <div class="col-2">
-                  <div class="day3">
-                    <div class="threeWeather">
-                      This is some text within a card body.
-                    </div>
-                  </div>
-            <div class="col-2">
-                  <div class="day4">
-                    <div class="fourWeather">
-                      This is some text within a card body.
-                    </div>
-                  </div>
-            <div class="col-2">
-                  <div class="day5">
-                    <div class="fiveweather">
-                      This is some text within a card body.
-                    </div>
-                  </div>
-            </div>
-        </div>
-    </div>
-    
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <script src="script.js"></script>
-</body>
+    <script src="../WeatherHub/assets/script.js"></script>
+  </body>
 </html>
